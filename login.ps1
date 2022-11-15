@@ -36,7 +36,7 @@ if (-not(Get-Command yaml-utils-Hello -errorAction SilentlyContinue)) {
   }
 
 $COMPANYSamlUrl = 'https://idp.COMPANY.com.au/my.policy'
-$COMPANYDomain  = 'aur.national.com.au'
+$COMPANYDomain  = 'sub.yourcompany.com.au'
 $profile    = 'saml'
 
 [string]$originalUserName  = $env:UserName
