@@ -163,7 +163,7 @@ function GetDBClusterStatus($dbClusterName) {
 
     function CloneClusterDatabaseByTakingSnapshotAndRestoring($dbClusterIdentifier, $dbInstanceIdentifier, $port,$subnetGroupName, $vpcSecurityGroupID, $kmsKeyID, $dbClusterParameterGroupName, $ApplicationIDTag, $CostCentreTag, $dbClusterARNForTargetToBeCloned, $dbClusterARNForDestOfClone, $dbInstanceARNForDestOfClone, $waitTillComplete = $False, $ec2Size='db.r4.large', $deleteExistingSnapShotName = '') {
         
-        if (deleteExistingSnapShotName != '')
+        if ($deleteExistingSnapShotName != '')
         {
             Write-Host  "Delete " + $deleteExistingSnapShotName  + " cluster snapshot (fails silently if it doesn't exists)"
             aws rds delete-db-cluster-snapshot --db-cluster-snapshot-identifier $deleteExistingSnapShotName
